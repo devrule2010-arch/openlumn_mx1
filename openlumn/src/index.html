@@ -1,0 +1,21 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="styles.css"><title>OpenLumn</title>
+<body class="glass"><div class="pad">
+  <div class="row"><h1>OpenLumn</h1><label class="row dim">Active <input class="sw" type="checkbox" data-k="active"></label></div>
+  <div class="bar" id="grad"></div>
+  <div class="row"><span>Colors</span><span class="row"><input type="color" data-k="primary"><input type="color" data-k="secondary"></span></div>
+  <label class="row"><span>Override album color</span><input class="sw" type="checkbox" data-k="overrideAlbum"></label>
+  <div class="seg" id="modes">
+    <button data-m="sync">Music Sync</button><button data-m="default">Default</button><button data-m="idle">Idle</button><button data-m="none">None</button>
+  </div>
+  <label class="row"><span>Notch compatibility</span><input class="sw" type="checkbox" data-k="notch"></label>
+  <div class="row"><span>Thickness</span><input type="range" min="4" max="80" step="1" data-k="thickness"></div>
+  <div class="row"><span>Glow</span><input type="range" min="0" max="100" step="1" data-k="glow"></div>
+  <div class="sec"><span class="dim">Displays</span><div id="displays"></div></div>
+  <div class="sec">
+    <label class="row"><span>Floating player</span><input class="sw" type="checkbox" data-k="floatingPlayer"></label>
+    <label class="row"><span>Idle player</span><input class="sw" type="checkbox" data-k="lockscreenPlayer"></label>
+  </div>
+  <div class="row" style="margin-top:auto"><span class="dim" id="np"></span><button class="btn" id="quit">Quit</button></div>
+</div>
+<script src="shared.js"></script>
+<script src="popover.js"></script>

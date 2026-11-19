@@ -1,0 +1,10 @@
+<!doctype html><meta charset="utf-8"><link rel="stylesheet" href="styles.css"><title>OpenLumn player</title>
+<body data-tauri-drag-region style="padding:6px">
+<div class="card" style="height:100%" data-tauri-drag-region><div class="np" data-tauri-drag-region>
+  <img id="art" alt=""><div class="meta" data-tauri-drag-region>
+    <div class="t" id="title">Nothing playing</div><div class="dim" id="artist"></div>
+    <canvas class="wave" id="wave"></canvas>
+    <div class="prog"><i id="prog"></i></div>
+    <div class="ctl"><button data-act="prev">⏮</button><button id="pp" data-act="toggle">▶</button><button data-act="next">⏭</button></div>
+  </div></div></div>
+<script src="shared.js"></script><script>OL.init().then(OL.bindPlayer)</script>

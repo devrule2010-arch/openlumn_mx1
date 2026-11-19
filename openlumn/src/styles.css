@@ -1,0 +1,37 @@
+:root{--ink:#f4f5f8;--dim:rgba(244,245,248,.58);--line:rgba(255,255,255,.16);--fill:rgba(255,255,255,.08);--a:#ff3d81;--b:#3d7bff}
+*{box-sizing:border-box;margin:0;user-select:none}
+html,body{height:100%;background:transparent;color:var(--ink);font:13px/1.4 "Segoe UI Variable Text","Segoe UI",system-ui,sans-serif;overflow:hidden}
+body.glass{background:rgba(18,18,24,.38);border:1px solid var(--line);border-radius:12px;box-shadow:inset 0 1px 0 rgba(255,255,255,.22)}
+h1{font:600 15px "Segoe UI Variable Display","Segoe UI",sans-serif}
+.pad{padding:16px;display:flex;flex-direction:column;gap:12px;height:100%}
+.row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.dim{color:var(--dim)}
+.bar{height:14px;border-radius:7px;border:1px solid var(--line)}
+.sw{appearance:none;width:34px;height:20px;border-radius:10px;background:rgba(255,255,255,.18);position:relative;cursor:pointer;transition:background .15s;flex:none}
+.sw::after{content:"";position:absolute;top:2px;left:2px;width:16px;height:16px;border-radius:50%;background:#fff;transition:transform .15s}
+.sw:checked{background:var(--a)}.sw:checked::after{transform:translateX(14px)}
+input[type=color]{width:30px;height:30px;border:1px solid var(--line);border-radius:8px;background:none;padding:2px;cursor:pointer}
+input[type=range]{appearance:none;width:170px;height:4px;border-radius:2px;background:rgba(255,255,255,.22)}
+input[type=range]::-webkit-slider-thumb{appearance:none;width:14px;height:14px;border-radius:50%;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+.seg{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--fill);border-radius:8px;padding:2px}
+.seg button{border:0;background:none;color:var(--dim);padding:6px 0;border-radius:6px;font:inherit;cursor:pointer}
+.seg button.on{background:rgba(255,255,255,.18);color:var(--ink)}
+.sec{border-top:1px solid var(--line);padding-top:10px;display:flex;flex-direction:column;gap:9px}
+.btn{border:1px solid var(--line);background:var(--fill);color:var(--ink);border-radius:8px;padding:6px 10px;font:inherit;cursor:pointer}
+.btn:hover{background:rgba(255,255,255,.16)}
+/* now playing card */
+.card{position:relative;overflow:hidden;border-radius:18px;border:1px solid var(--line);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 12px 40px rgba(0,0,0,.35);background:rgba(20,20,26,.35)}
+.card::before{content:"";position:absolute;inset:-40px;background:var(--art,none) center/cover;filter:blur(34px) saturate(1.7);opacity:.55;z-index:-1}
+.np{display:flex;gap:14px;align-items:center;padding:14px;height:100%}
+.np img,.np .ph{width:84px;height:84px;border-radius:12px;object-fit:cover;background:var(--fill);flex:none}
+.np .meta{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.np .t{font-weight:600;font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.prog{height:4px;border-radius:2px;background:rgba(255,255,255,.22);overflow:hidden}
+.prog i{display:block;height:100%;width:0;background:#fff}
+.ctl{display:flex;gap:14px;align-items:center}
+.ctl button{border:0;background:none;color:var(--ink);font-size:18px;cursor:pointer;opacity:.9}
+canvas.wave{width:100%;height:18px}
+body.idle{background:rgba(0,0,0,.5);display:grid;place-items:center}
+body.idle .card{width:560px;height:240px}
+body.idle .np img,body.idle .np .ph{width:190px;height:190px;border-radius:16px}
+body.idle .t{font-size:22px}
